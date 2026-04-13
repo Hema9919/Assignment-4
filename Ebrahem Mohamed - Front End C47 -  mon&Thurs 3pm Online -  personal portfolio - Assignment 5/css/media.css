@@ -1,0 +1,108 @@
+/* =====================================================
+   MEDIA QUERIES — The UX Review
+   Breakpoints:
+     - 1024px: Tablet landscape
+     - 768px:  Tablet portrait
+     - 480px:  Mobile
+   ===================================================== */
+
+/* ===================== 1024px ===================== */
+@media (max-width: 1024px) {
+
+  .sidebar {
+    width: 80px;
+    padding: 20px 0;
+    align-items: center;
+  }
+
+  /* اخفاء النصوص */
+  .sidebar h1,
+  /* .sidebar span, */
+  .sidebar h5 {
+    display: none;
+  }
+
+  /* الايقونات تبقى في النص */
+  .side-list {
+    align-items: center;
+  }
+
+  .side-list .item {
+    justify-content: center;
+  }
+
+  /* المين ياخد مكان اكبر */
+  .main-wrapper {
+    margin-right: 80px;
+  }
+}
+
+/* ===================== 768px ===================== */
+@media (max-width: 768px) {
+
+  .main {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "c1 c1 c1 c1 c1 c1"
+      "c2 c2 c2 c3 c3 c3"
+      "c4 c4 c4 c5 c5 c5"
+      "c6 c6 c6 c6 c6 c6"
+      "c7 c7 c7 c7 c7 c7"
+      "c8 c8 c8 c9 c9 c9"
+      "c10 c10 c10 c11 c11 c11";
+  }
+
+  /* الكروت تاخد عرض كامل */
+  .c7 .cards .card {
+    width: 100%;
+  }
+}
+
+/* ===================== 480px ===================== */
+@media (max-width: 480px) {
+
+  /* اخفاء السايد بار */
+  .sidebar {
+    display: none;
+  }
+
+  /* المين يرجع full */
+  .main-wrapper {
+    margin-right: 0;
+  }
+
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "c1"
+      "c2"
+      "c3"
+      "c4"
+      "c5"
+      "c6"
+      "c7"
+      "c8"
+      "c9"
+      "c10"
+      "c11";
+  }
+
+  /* تقليل padding */
+  .main {
+    padding: 1rem;
+  }
+
+  /* الهيدر ينزل تحت */
+  .c1 {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  /* البروفايل يصغر */
+  .profile {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+}
