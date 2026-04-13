@@ -8,303 +8,101 @@
 
 /* ===================== 1024px ===================== */
 @media (max-width: 1024px) {
-  .container {
-    width: 90%;
+
+  .sidebar {
+    width: 80px;
+    padding: 20px 0;
+    align-items: center;
   }
 
-  /* Navbar */
-  .navbar {
-    width: 90%;
-    top: 16px;
-  }
-  .nav-links {
-    gap: 12px;
-  }
-  .logo {
-    font-size: 22px;
+  /* اخفاء النصوص */
+  .sidebar h1,
+  /* .sidebar span, */
+  .sidebar h5 {
+    display: none;
   }
 
-  /* Hero */
-  .hero-title {
-    font-size: 54px;
-  }
-  .hero-desc {
-    font-size: 18px;
-    width: 380px;
+  /* الايقونات تبقى في النص */
+  .side-list {
+    align-items: center;
   }
 
-  /* Articles */
-  .title-results h2 {
-    font-size: 36px;
-  }
-  .content h4 {
-    font-size: 20px;
+  .side-list .item {
+    justify-content: center;
   }
 
-  /* Authors */
-  .title-auth h2 {
-    font-size: 36px;
-  }
-  .card h3 {
-    font-size: 22px;
-  }
-
-  /* Footer */
-  .footer-inner {
-    gap: 30px;
+  /* المين ياخد مكان اكبر */
+  .main-wrapper {
+    margin-right: 80px;
   }
 }
 
 /* ===================== 768px ===================== */
 @media (max-width: 768px) {
-  .container {
-    width: 92%;
+
+  .main {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-areas:
+      "c1 c1 c1 c1 c1 c1"
+      "c2 c2 c2 c3 c3 c3"
+      "c4 c4 c4 c5 c5 c5"
+      "c6 c6 c6 c6 c6 c6"
+      "c7 c7 c7 c7 c7 c7"
+      "c8 c8 c8 c9 c9 c9"
+      "c10 c10 c10 c11 c11 c11";
   }
 
-  /* ---- Navbar ---- */
-  .navbar {
-    width: 90%;
-    top: 12px;
-    padding: 10px 16px;
-  }
-  .nav-links {
-    display: none; /* hidden on mobile */
-  }
-  .subscribe-btn {
-    display: none; /* replaced by mobile menu button */
-  }
-  .hamburger {
-    display: flex;
-  }
-  .logo {
-    font-size: 20px;
-  }
-
-  /* ---- Hero ---- */
-  #hero {
-    height: auto;
-    padding: 120px 0 60px;
-  }
-  .hero {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .hero-content {
+  /* الكروت تاخد عرض كامل */
+  .c7 .cards .card {
     width: 100%;
-    padding-top: 0;
-    order: 2;
-  }
-  .hero-image {
-    width: 100%;
-    height: 260px;
-    transform: rotate(0deg);
-    order: 1;
-  }
-  .hero-title {
-    font-size: 48px;
-  }
-  .hero-desc {
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .hero-btns {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-  .btn-global {
-    font-size: 16px;
-  }
-  .btn-primary {
-    margin-right: 0;
-  }
-
-  /* ---- Latest Articles ---- */
-  .lasted {
-    flex-direction: column;
-  }
-  .results {
-    width: 100%;
-  }
-  .numbers {
-    width: 100%;
-    position: static;
-    padding: 0;
-  }
-  .title-results {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-  .title-results h2 {
-    font-size: 30px;
-  }
-  .result {
-    flex-direction: column;
-    padding: 20px;
-  }
-  .result .image {
-    width: 100%;
-  }
-  .icons {
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .results a.btn-primary {
-    width: auto;
-    display: inline-flex;
-  }
-
-  /* ---- Authors ---- */
-  #authors {
-    padding: 40px 0;
-  }
-  .title-auth h2 {
-    font-size: 32px;
-  }
-  .title-auth p::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .cards {
-    flex-direction: column;
-    gap: 24px;
-    width: 100%;
-    align-items: stretch;
-  }
-  .card {
-    width: 100%;
-    box-sizing: border-box;
-  }
-
-  /* ---- Community ---- */
-  .community-inner {
-    flex-direction: column;
-    gap: 30px;
-  }
-  .community-left h3 {
-    font-size: 22px;
-  }
-  .community-right h3 {
-    font-size: 18px;
-  }
-  #community .title-auth h2 {
-    font-size: 32px;
-  }
-
-  /* ---- Footer ---- */
-  .footer-inner {
-    flex-direction: column;
-    gap: 36px;
-  }
-  .footer-col {
-    flex: unset;
-    width: 100%;
-  }
-  .footer-brand {
-    flex: unset;
-  }
-  .footer-bottom {
-    flex-direction: column;
-    gap: 14px;
-    text-align: center;
-  }
-  .footer-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 16px;
   }
 }
 
 /* ===================== 480px ===================== */
 @media (max-width: 480px) {
-  /* Navbar */
-  .navbar {
-    width: 92%;
-    top: 8px;
-    padding: 8px 12px;
-  }
-  .logo {
-    font-size: 17px;
+
+  /* اخفاء السايد بار */
+  .sidebar {
+    display: none;
   }
 
-  /* Hero */
-  #hero {
-    padding: 100px 0 40px;
-  }
-  .hero-title {
-    font-size: 36px;
-  }
-  .hero-badge {
-    font-size: 11px;
-    padding: 7px;
-    width: 110px;
-  }
-  .hero-image {
-    height: 200px;
-  }
-  .hero-desc {
-    font-size: 14px;
-  }
-  .btn-global {
-    font-size: 14px;
-    padding: 8px 12px;
+  /* المين يرجع full */
+  .main-wrapper {
+    margin-right: 0;
   }
 
-  /* Articles */
-  .title-results h2 {
-    font-size: 24px;
-  }
-  .result {
-    padding: 14px;
-  }
-  .content h4 {
-    font-size: 17px;
-  }
-  .trend h3,
-  .categres h3 {
-    font-size: 22px;
-  }
-
-  /* Authors */
-  .title-auth h2 {
-    font-size: 26px;
-  }
-  .card h3 {
-    font-size: 20px;
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "c1"
+      "c2"
+      "c3"
+      "c4"
+      "c5"
+      "c6"
+      "c7"
+      "c8"
+      "c9"
+      "c10"
+      "c11";
   }
 
-  /* Community */
-  #community .title-auth h2 {
-    font-size: 26px;
-  }
-  .community-left h3 {
-    font-size: 18px;
-  }
-  .community-perks li {
-    font-size: 13px;
-  }
-  .testimonial p {
-    font-size: 13px;
+  /* تقليل padding */
+  .main {
+    padding: 1rem;
   }
 
-  /* Footer */
-  .footer-logo-text {
-    font-size: 15px;
-  }
-  .footer-col h4 {
-    font-size: 13px;
-  }
-  .footer-bottom {
-    font-size: 10px;
-  }
-  .footer-links a {
-    font-size: 10px;
+  /* الهيدر ينزل تحت */
+  .c1 {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
   }
 
-  /* Mobile menu */
-  .mobile-menu {
-    width: 80%;
+  /* البروفايل يصغر */
+  .profile {
+    width: 100%;
+    justify-content: space-between;
   }
+
 }
